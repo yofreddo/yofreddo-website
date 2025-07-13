@@ -1,0 +1,207 @@
+body {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 100%;
+    min-height: 100vh;
+    font-family: sans-serif;
+    background-image: url('media/background.jpg');
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: aliceblue;
+    font-size: 25px;
+}
+
+/* Overlay für Hintergrundbild */
+body::before {
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+header {
+    font-size: 20px;
+    width: 100%;
+    align-items: center;
+}
+
+header a {
+    color: rgb(236, 236, 236);
+    display: inline-block;
+    width: 15%;
+    margin: 10px 80px;
+    padding: 10px;
+    background-color:rgb(1, 0, 19);
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    border-radius: 5px;
+    transition: background-color 0.3s ease, width 0.3s ease; /* für Übergang zu Hover */
+}
+
+header a:hover {
+    width: calc(15% + 10px);
+    background-color: rgb(22, 22, 22);
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(164, 169, 173);
+    font-weight: bold;
+    transition: font-weight 0.3s ease,
+}
+
+.content {
+    top: 5%;
+    width: 31%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 30px 60px 30px;
+    background-color:rgba(0, 2, 14, 0.5);
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    border-radius: 20px;
+}
+
+h1 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 40px;
+    font-weight: bolder;
+    padding: 0px;
+    margin: 10px 0px;
+}
+
+.picture img {
+    width: 50%;
+    max-width: 100%;
+    border: aliceblue solid 5px;
+    border-radius: 50%;
+}
+
+.links {
+    width: 100%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.links a {
+    width: 75%;
+    margin: 8px 0px;
+    display: inline-block; /* damit Padding, Margin und Breite funktionieren */
+    padding: 20px 25px;
+    color: aliceblue;
+    text-decoration: none; /* damit Link nicht unterstrichen */
+    font-weight: bold;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer; /* damit Kursor beim rüber fahren zu Klick-Kursor wird */
+    text-align: center;
+    transition: background-color 0.3s ease, width 0.3s ease; /* für Übergang zu Hover */
+}
+
+.youtube {
+    background-color: #FF0000;
+}
+
+a.youtube:hover {
+    background-color: #940000;
+    width: 80%;
+}
+
+.spotify {
+    background-color: #1ED760;
+}
+
+a.spotify:hover {
+    background-color: #148d3f;
+    width: 80%;
+}
+
+.rautemusik {
+    background-color: #F44336;
+}
+
+a.rautemusik:hover {
+    background-color: #85251f;
+    width: 80%;
+}
+
+.instagram {
+    background-color: #d62976;
+}
+
+a.instagram:hover {
+    background-color: #72163f;
+    width: 80%;
+}
+
+.facebook {
+    background-color: #0866FF;
+}
+
+a.facebook:hover {
+    background-color: #083a8b;
+    width: 80%;
+}
+
+.booking {
+    background-color: #252525;
+}
+
+a.booking:hover {
+    background-color: #0e0d0d;
+    width: 80%;
+}
+
+.datenschutz {
+    text-align: left;
+    font-size: 16px;
+    width: 60%;
+}
+
+footer {
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+footer a {
+    font-size: 15px;
+    margin: 0 10px;
+}
+
+/* Bildgröße für Smartphones */
+@media (max-width: 768px) {
+    .content {
+    width: 75%;
+    }
+
+    .picture img {
+    width: 25%;
+    }
+}
+
+ /* Bildgröße für extrem kleine Bildschirme */
+@media (max-width: 480px) {
+  .picture img {
+    width: 80%;
+  }
+}
